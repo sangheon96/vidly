@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -166,10 +167,45 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106180114401_InitialModel.cs" />
+    <Compile Include="Migrations\202106180114401_InitialModel.Designer.cs">
+      <DependentUpon>202106180114401_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106180150018_AddIsSubsribedToCustomer.cs" />
+    <Compile Include="Migrations\202106180150018_AddIsSubsribedToCustomer.Designer.cs">
+      <DependentUpon>202106180150018_AddIsSubsribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106180159081_AddMembershipType.cs" />
+    <Compile Include="Migrations\202106180159081_AddMembershipType.Designer.cs">
+      <DependentUpon>202106180159081_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106180202039_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\202106180202039_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>202106180202039_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106180209489_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\202106180209489_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>202106180209489_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106180240108_AddNameToMembershipType.cs" />
+    <Compile Include="Migrations\202106180240108_AddNameToMembershipType.Designer.cs">
+      <DependentUpon>202106180240108_AddNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106180248241_AddBirthdateToCustomer.cs" />
+    <Compile Include="Migrations\202106180248241_AddBirthdateToCustomer.Designer.cs">
+      <DependentUpon>202106180248241_AddBirthdateToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106180305162_AddMovieAndGenre.cs" />
+    <Compile Include="Migrations\202106180305162_AddMovieAndGenre.Designer.cs">
+      <DependentUpon>202106180305162_AddMovieAndGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -236,6 +272,7 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <None Include="Views\Customers\Details.cshtml" />
     <None Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
     <None Include="Views\Movies\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -247,6 +284,32 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202106180114401_InitialModel.resx">
+      <DependentUpon>202106180114401_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106180150018_AddIsSubsribedToCustomer.resx">
+      <DependentUpon>202106180150018_AddIsSubsribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106180159081_AddMembershipType.resx">
+      <DependentUpon>202106180159081_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106180202039_PopulateMembershipTypes.resx">
+      <DependentUpon>202106180202039_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106180209489_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>202106180209489_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106180240108_AddNameToMembershipType.resx">
+      <DependentUpon>202106180240108_AddNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106180248241_AddBirthdateToCustomer.resx">
+      <DependentUpon>202106180248241_AddBirthdateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106180305162_AddMovieAndGenre.resx">
+      <DependentUpon>202106180305162_AddMovieAndGenre.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
